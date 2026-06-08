@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Priyanshi — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <!-- Noise Overlay -->
+  <div class="noise"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-logo">P<span>.</span></div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#about" onclick="closeMobile()">About</a>
+    <a href="#skills" onclick="closeMobile()">Skills</a>
+    <a href="#projects" onclick="closeMobile()">Projects</a>
+    <a href="#contact" onclick="closeMobile()">Contact</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg-text">PRIYANSHI</div>
+    <div class="hero-content">
+      <p class="hero-tag reveal">B.Tech CSE · PP Savani University</p>
+      <h1 class="hero-title reveal">
+        <span class="line">Building</span>
+        <span class="line italic">digital</span>
+        <span class="line">experiences.</span>
+      </h1>
+      <p class="hero-sub reveal">Android · Full Stack · Python · MongoDB</p>
+      <div class="hero-cta reveal">
+        <a href="#projects" class="btn-primary">View Work</a>
+        <a href="#contact" class="btn-ghost">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about section" id="about">
+    <div class="section-label">01 — About</div>
+    <div class="about-grid">
+      <div class="about-left reveal">
+        <h2>CS Student &<br/><em>Creative Builder</em></h2>
+      </div>
+      <div class="about-right reveal">
+        <p>I'm Priyanshi, a Computer Science Engineering student in Semester 4 at PP Savani University, Surat. I build Android apps, full-stack web projects, and love turning ideas into real, working software.</p>
+        <p>Currently interning at <strong>Thiranex</strong> as a Full Stack Developer and holding a <strong>Cisco AICTE</strong> Network Engineering internship. I also run a crochet shop called <em>priblooms</em> and create UGC skincare content — because creativity lives in code and crafts alike.</p>
+        <div class="about-stats">
+          <div class="stat">
+            <span class="stat-num">4</span>
+            <span class="stat-label">Semesters</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">2</span>
+            <span class="stat-label">Internships</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">5+</span>
+            <span class="stat-label">Projects</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills section" id="skills">
+    <div class="section-label">02 — Skills</div>
+    <h2 class="section-title reveal">What I Work With</h2>
+    <div class="skills-grid reveal">
+      <div class="skill-card">
+        <div class="skill-icon">◈</div>
+        <h3>Android Dev</h3>
+        <p>Android Studio, XML UI, Jetpack Compose, Java</p>
+        <div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">◉</div>
+        <h3>Full Stack Web</h3>
+        <p>Node.js, Express.js, HTML/CSS/JS, REST APIs</p>
+        <div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">◆</div>
+        <h3>Database</h3>
+        <p>MongoDB Atlas, MongoDB Compass, Mongoose ODM</p>
+        <div class="skill-bar"><div class="skill-fill" style="--w:78%"></div></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">◇</div>
+        <h3>Python</h3>
+        <p>Scripting, Data Structures, Automation, Projects</p>
+        <div class="skill-bar"><div class="skill-fill" style="--w:75%"></div></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">▣</div>
+        <h3>Networking</h3>
+        <p>Cisco Systems, Network Engineering (AICTE)</p>
+        <div class="skill-bar"><div class="skill-fill" style="--w:70%"></div></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">▷</div>
+        <h3>Dev Tools</h3>
+        <p>Git, GitHub, VS Code, Claude Code, Postman</p>
+        <div class="skill-bar"><div class="skill-fill" style="--w:82%"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects section" id="projects">
+    <div class="section-label">03 — Projects</div>
+    <h2 class="section-title reveal">Selected Work</h2>
+    <div class="projects-grid" id="projects-grid">
+      <!-- Loaded dynamically from API -->
+      <div class="loading-state">
+        <span class="loading-dot"></span>
+        <span class="loading-dot"></span>
+        <span class="loading-dot"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact section" id="contact">
+    <div class="section-label">04 — Contact</div>
+    <div class="contact-grid">
+      <div class="contact-left reveal">
+        <h2>Let's build<br/><em>something</em><br/>together.</h2>
+        <div class="contact-links">
+          <a href="https://github.com/" target="_blank" class="contact-link">GitHub ↗</a>
+          <a href="https://linkedin.com/" target="_blank" class="contact-link">LinkedIn ↗</a>
+          <a href="https://instagram.com/digitalessence.e" target="_blank" class="contact-link">Instagram ↗</a>
+        </div>
+      </div>
+      <div class="contact-right reveal">
+        <div class="form-group">
+          <input type="text" id="name" placeholder="Your Name" class="form-input"/>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" placeholder="Your Email" class="form-input"/>
+        </div>
+        <div class="form-group">
+          <textarea id="message" placeholder="Your Message" rows="5" class="form-input"></textarea>
+        </div>
+        <button class="btn-primary" id="send-btn" onclick="sendMessage()">Send Message →</button>
+        <div id="form-status" class="form-status"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2026 Priyanshi · Built with Node.js + MongoDB · Deployed on Vercel</p>
+    <p class="footer-sub">CSE Semester 4 · PP Savani University · Surat, Gujarat</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
