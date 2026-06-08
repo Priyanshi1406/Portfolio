@@ -41,3 +41,4 @@ mongoose.connect(MONGO_URI)
     console.error('❌ MongoDB error:', err.message);
     app.listen(PORT, () => console.log(`🚀 Server running at http://localhost:${PORT}`));
   });
+     module.exports = app;
